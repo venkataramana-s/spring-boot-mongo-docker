@@ -15,6 +15,7 @@ node
     {
     def mavenCMD  = "${mavenHome}/bin/mvn"
         sh "${mavenCMD} sonar:sonar"
+        enableConfigSubstitution: true
         }
      stage("Build Docker Image"){
     sh "docker build -t venkataramana7722/spring-boot-mongo:1 ."
